@@ -1,0 +1,87 @@
+.Add {
+  font-family: "DM Sans", sans-serif;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    p {
+      font-size: 12px;
+    }
+
+    input {
+      width: 80%;
+      font-size: 24px;
+      font-weight: 600;
+      color: black;
+      padding: 20px 0 20px 0;
+      border: none;
+      border-bottom: 1px solid lightgrey;
+      border-radius: none;
+    }
+  }
+  &-left,
+  &-right,
+  &-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &-size,
+  &-color,
+  &-price,
+  &-inventory,
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    p.title {
+      font-weight: 600;
+      font-size: 15px;
+      color: #333;
+    }
+  }
+  &-desc {
+    &-textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid lightgrey;
+      border-radius: 10px;
+    }
+    &-policy {
+      height: 264px;
+    }
+  }
+  &-detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  &-image {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    p.title {
+      font-weight: 600;
+      font-size: 15px;
+      color: #333;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      input {
+        cursor: pointer;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+}

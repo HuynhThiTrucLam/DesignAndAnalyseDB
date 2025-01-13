@@ -1,0 +1,120 @@
+.OrderDetail {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  &-header {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-bottom {
+      p.title {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: aqua;
+    font-weight: 600;
+  }
+
+  &-body {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  &-total {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  &-amount,
+  &-shipping,
+  &-discount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p.title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  &-pay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 14px;
+    p.title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  &-product {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 40% 1fr 1fr;
+    align-items: center;
+    &-content {
+      align-items: center;
+      display: flex;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      p {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    &-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &-color {
+      display: flex;
+      flex-direction: row;
+      gap: 6px;
+      align-items: center;
+      p {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    &-quantity {
+      display: flex;
+      justify-content: center;
+    }
+    &-price {
+      display: flex;
+      justify-content: right;
+      p {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}

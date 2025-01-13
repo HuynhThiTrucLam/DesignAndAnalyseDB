@@ -1,0 +1,57 @@
+.product {
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  &-img {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #d64646;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    span {
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-size: 12px;
+      padding: 2px 4px;
+    }
+  }
+  &-name {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  &-pricePre {
+    sup {
+      font-size: 9px;
+    }
+    font-size: 13px;
+    margin-right: 8px;
+    text-decoration: line-through;
+  }
+  &-priceNow {
+    sup {
+      font-size: 9px;
+    }
+    font-size: 15px;
+    color: #d02428;
+    font-weight: 500;
+  }
+}

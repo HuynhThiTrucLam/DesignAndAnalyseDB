@@ -1,0 +1,20 @@
+.ManageOrder {
+  &-status {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    // gap: 10px;
+    &-item {
+      width: 100%;
+      height: auto;
+      &.active {
+        border: 1px solid #ff5a5f;
+      }
+    }
+    p.type {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+  }
+}

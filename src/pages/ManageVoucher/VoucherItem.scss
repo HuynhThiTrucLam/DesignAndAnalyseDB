@@ -1,0 +1,48 @@
+.Voucher {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  &-header {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      p {
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+    &-right {
+      p {
+        font-size: 12px;
+      }
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    &-item {
+      display: flex;
+      gap: 6px;
+      p.title {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+}

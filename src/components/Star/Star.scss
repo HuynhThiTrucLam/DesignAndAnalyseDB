@@ -1,0 +1,24 @@
+.star {
+  font-size: 14px;
+  color: black; /* Golden color for filled stars */
+  margin-right: 2px;
+}
+
+.star.full {
+  color: black; /* Golden color for filled stars */ /* Full yellow star */
+}
+
+.star.half {
+  color: black; /* Yellow color for the left half */
+  background: linear-gradient(
+    90deg,
+    black 50%,
+    #ddd 50%
+  ); /* Half filled star effect */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.star.empty {
+  color: #ddd; /* Light gray for empty stars */
+}

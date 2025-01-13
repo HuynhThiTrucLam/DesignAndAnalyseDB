@@ -1,0 +1,46 @@
+.productListSell {
+  &-container {
+    padding: 10px 11%;
+  }
+  &-header {
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #333;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+    h3 {
+      font-size: 30px;
+      font-weight: 400;
+      position: relative;
+      display: inline-block;
+      background-color: #fff;
+      z-index: 2;
+      padding-right: 15px;
+    }
+  }
+  &-shoes {
+    width: 100%;
+    gap: 15px;
+    margin-top: 24px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &-button {
+    margin: 40px 0 40px 100px;
+    a {
+      text-decoration: underline;
+      color: #333;
+      font-weight: 500;
+      &:hover {
+        color: #d64646;
+      }
+    }
+  }
+}

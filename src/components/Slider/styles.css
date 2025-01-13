@@ -1,0 +1,45 @@
+.embla {
+  margin: 0 auto;
+  position: relative;
+}
+.embla__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.embla__next svg,
+.embla__prev svg {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.embla__next svg:hover,
+.embla__prev svg:hover {
+  width: 60px;
+  height: 60px;
+}
+.embla__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+
+.embla__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.embla__container {
+  width: 100%;
+  display: flex;
+}
+.embla__slide {
+  width: 100%;
+  flex: 0 0 100%; /* Slide covers 80% of the viewport */
+}
