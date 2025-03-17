@@ -1,18 +1,14 @@
 import React from "react";
 
 // Import images for the header
+import { Link, useNavigate } from "react-router-dom";
+import sandalBlack from "../../assets/images/dep-black.png";
+import shoesBlack from "../../assets/images/giay-black.png";
 import logo from "../../assets/images/logo.png";
 import menu from "../../assets/images/menu.png";
-import menuRed from "../../assets/images/menu-red.png";
-import shoesBlack from "../../assets/images/giay-black.png";
-import shoesRed from "../../assets/images/giay.png";
-import sandalBlack from "../../assets/images/dep-black.png";
-import sandalRed from "../../assets/images/dep.png";
 import accessoriesBlack from "../../assets/images/phukien-black.png";
-import accessoriesRed from "../../assets/images/tui.png";
-import "./styles.scss";
-import { Link, useNavigate } from "react-router-dom";
 import { CartTab } from "../Cart/CartTab";
+import "./styles.scss";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();

@@ -1,8 +1,16 @@
 import { Input } from "@/components/ui/input";
-import "./ModelAdd.scss";
 import AddToPhotosOutlinedIcon from "@mui/icons-material/AddToPhotosOutlined";
+import "./ModelAdd.scss";
 
-import { Textarea } from "@/components/ui/textarea";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { ColorPicker } from "@/components/ui/color-picker";
 import {
   Select,
   SelectContent,
@@ -11,24 +19,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogTrigger,
-  AlertDialogCancel,
-} from "@/components/ui/alert-dialog";
-import { mockSizes, mockTypes } from "../../AdminHome";
-import {
-  TooltipProvider,
   Tooltip,
-  TooltipTrigger,
   TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { IconButton } from "@mui/material";
 import { useState } from "react";
-import { ColorPicker } from "@/components/ui/color-picker";
+import { mockSizes, mockTypes } from "../../AdminHome";
 
 const ModelAdd = () => {
   const [name, setName] = useState("");
@@ -40,7 +40,6 @@ const ModelAdd = () => {
   const [material, setMaterial] = useState("");
   const [policy, setPolicy] = useState("");
   const [instruction, setInstruction] = useState("");
-  const [picture, setPicture] = useState("");
   const [inventory, setInventory] = useState(0);
 
   const handleAddProduct = () => {

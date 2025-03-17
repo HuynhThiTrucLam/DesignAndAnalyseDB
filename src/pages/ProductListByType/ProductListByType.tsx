@@ -1,8 +1,4 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import ProductListSell from "../Home/component/ProductList";
-import { Product } from "@/types/Product";
-import ProductItemSell from "../Home/component/ProductItemSell";
+import { Input } from "@/components/ui/input";
 import {
   Pagination,
   PaginationContent,
@@ -12,8 +8,11 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { Product } from "@/types/Product";
 import { SearchIcon } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import ProductItemSell from "../Home/component/ProductItemSell";
 
 const mockData: Product[] = [
   {

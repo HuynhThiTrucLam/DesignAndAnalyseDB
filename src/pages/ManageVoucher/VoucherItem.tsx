@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-import "./VoucherItem.scss";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -9,6 +7,8 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Voucher } from "@/types/Voucher";
 import { Chip } from "@mui/material";
+import React, { useEffect } from "react";
+import "./VoucherItem.scss";
 
 interface VoucherItemProps {
   voucherId: string;
@@ -26,7 +26,7 @@ const voucherMockData: Voucher = {
   description: "Mua hàng giảm giá 10%",
 };
 
-const VoucherItem = ({ voucherId }: VoucherItemProps) => {
+const VoucherItem = ({}: VoucherItemProps) => {
   const [voucher, setVoucher] = React.useState<Voucher | null>(null);
 
   useEffect(() => {

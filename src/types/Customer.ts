@@ -1,5 +1,3 @@
-import { Order } from "./Order";
-
 export type ShippingAddress = {
   id: string;
   name: string;

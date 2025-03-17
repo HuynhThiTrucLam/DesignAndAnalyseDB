@@ -1,8 +1,13 @@
-import { Product } from "@/types/Product";
-import "./ModelDetail.scss";
 import renderStars from "@/components/Star/star";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
@@ -11,16 +16,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogTrigger,
-  AlertDialogCancel,
-} from "@/components/ui/alert-dialog";
-import { mockTypes } from "../../AdminHome";
+import { Textarea } from "@/components/ui/textarea";
+import { Product } from "@/types/Product";
 import { useState } from "react";
+import { mockTypes } from "../../AdminHome";
+import "./ModelDetail.scss";
 
 interface ProductItemProps {
   product?: Product;
@@ -33,30 +33,6 @@ const ModelUpdate = ({ product }: ProductItemProps) => {
     product?.colorList[0].sizeList[0].id
   );
   const [selectedType, setSelectedType] = useState(product?.typeOf.value || "");
-  const [name, setName] = useState(product?.name);
-  const [type, setType] = useState(product?.typeOf.value);
-  const [size, setSize] = useState("");
-  const [price, setPrice] = useState("");
-  const [description, setDescription] = useState("");
-  const [material, setMaterial] = useState("");
-  const [policy, setPolicy] = useState("");
-  const [instruction, setInstruction] = useState("");
-  const [picture, setPicture] = useState("");
-  const [inventory, setInventory] = useState(0);
-
-  const handleAddProduct = () => {
-    console.log(name);
-    console.log(selectedColor);
-    console.log(size);
-    console.log(type);
-    console.log(price);
-    console.log(inventory);
-    console.log(description);
-    console.log(material);
-    console.log(policy);
-    console.log(instruction);
-    console.log("Add new product");
-  };
 
   const handleTypeChange = (value: string) => {
     setSelectedType(value);
@@ -68,33 +44,11 @@ const ModelUpdate = ({ product }: ProductItemProps) => {
       product?.colorList.find((item) => item.id === colorId)?.sizeList[0].id
     );
   };
-  const handleSelectSize = (sizeId: string) => {
-    setSelectedSize(selectedSize);
-  };
+
   const handleOpenFeedBack = () => {
     setOpenFeedback(!openFeedback);
   };
-  const handleNameChange = (event: any) => {
-    setName(event.target.value);
-  };
-  const handlePriceChange = (event: any) => {
-    setPrice(event.target.value);
-  };
-  const handleInventoryChange = (event: any) => {
-    setInventory(event.target.value);
-  };
-  const handleDescChange = (event: any) => {
-    setDescription(event.target.value);
-  };
-  const handleInstructionChange = (event: any) => {
-    setInstruction(event.target.value);
-  };
-  const handleMaterialChange = (event: any) => {
-    setMaterial(event.target.value);
-  };
-  const handlePolicyChange = (event: any) => {
-    setPolicy(event.target.value);
-  };
+
   return (
     <AlertDialog>
       <AlertDialogTrigger className="w-full  text-left">

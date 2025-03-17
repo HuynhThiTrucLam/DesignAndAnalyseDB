@@ -1,15 +1,9 @@
-import React, { useEffect } from "react";
-import { Slider } from "../../components/Slider";
-import Intro from "../../components/Intro";
 import { Product } from "@/types/Product";
-import "./index.scss";
+import React, { useEffect } from "react";
+import Intro from "../../components/Intro";
+import { Slider } from "../../components/Slider";
 import ProductListSell from "./component/ProductList";
-
-enum ProductType {
-  SHOES = "SHOES",
-  DEP = "DEP",
-  ANOTHER = "ANOTHER",
-}
+import "./index.scss";
 
 const mockData: Product[] = [
   {

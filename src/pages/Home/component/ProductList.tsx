@@ -1,5 +1,4 @@
 import { Product } from "@/types/Product";
-import React from "react";
 import ProductItemSell from "./ProductItemSell";
 import "./ProductListSell.scss";
 interface productProps {

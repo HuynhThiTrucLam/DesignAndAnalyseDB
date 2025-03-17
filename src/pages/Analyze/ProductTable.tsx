@@ -1,13 +1,11 @@
-import React from "react";
 import {
-  Typography,
   Box,
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableRow,
-  Chip,
+  Typography,
 } from "@mui/material";
 
 const topSellingProducts = [
@@ -54,12 +52,6 @@ const topSellingProducts = [
 ];
 
 const ProductTable = () => {
-  // Hàm trả về màu sắc dựa trên chỉ số (index)
-  const getChipColor = (index: any) => {
-    const colors = ["#d64646", "#000", "secondary", "#000", "#d64646"]; // Mảng màu
-    return colors[index % colors.length]; // Quay lại màu nếu index lớn hơn số màu trong mảng
-  };
-
   return (
     <Table
       aria-label="simple table"
@@ -92,7 +84,7 @@ const ProductTable = () => {
         </TableRow>
       </TableHead>
       <TableBody>
-        {topSellingProducts.map((product, index) => (
+        {topSellingProducts.map((product) => (
           <TableRow key={product.id}>
             <TableCell>
               <Box

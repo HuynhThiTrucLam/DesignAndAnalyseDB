@@ -1,28 +1,3 @@
-import { Order } from "@/types/Order";
-import "./ManageOrder.scss";
-import React, { useEffect, useState } from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Chip,
-  Card,
-  CardContent,
-  Typography,
-  Box,
-  Input,
-  TableFooter,
-} from "@mui/material";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import {
   Pagination,
   PaginationContent,
@@ -32,9 +7,34 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Order } from "@/types/Order";
+import {
+  Box,
+  Card,
+  CardContent,
+  Chip,
+  Input,
+  Table,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
+import React, { useEffect, useState } from "react";
+import "./ManageOrder.scss";
 
-import OrderItem from "./OrderItem";
 import { SearchIcon } from "lucide-react";
+import OrderItem from "./OrderItem";
 
 export const mockOrderData = [
   {
@@ -116,8 +116,6 @@ const statusOptions = [
 
 const ManageOder: React.FC = () => {
   //Phân trang
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
 
   const [orders, setOrders] = useState<Order[]>([]);
   const [status, setStatus] = useState<any>([]);
@@ -164,24 +162,6 @@ const ManageOder: React.FC = () => {
 
     // setOrders(filteredOrders);
   };
-
-  // Hàm phân trang
-  const handleChangePage = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null,
-    newPage: number
-  ) => {
-    setPage(newPage);
-  };
-  const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0); // Reset to the first page
-  };
-  const currentOrders = orders.slice(
-    page * rowsPerPage,
-    page * rowsPerPage + rowsPerPage
-  );
 
   useEffect(() => {
     setStatus(statusOptions);

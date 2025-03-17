@@ -1,7 +1,6 @@
 // import { createTheme } from "@material-ui/core/styles";
 import { createTheme } from "@mui/material/styles";
 import typography from "./Typography.ts";
-import shadows from "./Shadows";
 
 // ##############################
 
@@ -112,14 +111,14 @@ const baseTheme = createTheme({
       },
     },
 
-    MuiGridItem: {
-      styleOverrides: {
-        root: {
-          paddingTop: "30px",
-          paddingLeft: "30px !important",
-        },
-      },
-    },
+    // MuiGridItem: {
+    //   styleOverrides: {
+    //     root: {
+    //       paddingTop: "30px",
+    //       paddingLeft: "30px !important",
+    //     },
+    //   },
+    // },
   },
   mixins: {
     toolbar: {
@@ -133,9 +132,9 @@ const baseTheme = createTheme({
       },
     },
   },
-  status: {
-    danger: "#e53e3e",
-  },
+  // status: {
+  //   danger: "#e53e3e",
+  // },
   typography,
   breakpoints: {
     values: {
@@ -148,4 +147,4 @@ const baseTheme = createTheme({
   },
 });
 
-export { TopbarHeight, SidebarWidth, baseTheme };
+export { baseTheme, SidebarWidth, TopbarHeight };

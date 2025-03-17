@@ -1,8 +1,5 @@
 //Thong ke doanh thu cua san pham
-import { Card, Box, Typography, CardContent } from "@mui/material";
-import dayjs from "dayjs";
-import React, { useEffect } from "react";
-import { Chart } from "./Chart";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -11,14 +8,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { RevenueType } from "@/types/Chart";
-import { DatabaseBackup } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ToastAction } from "@/components/ui/toast";
 import { useToast } from "@/hooks/use-toast";
+import { RevenueType } from "@/types/Chart";
+import { Box, Card, Typography } from "@mui/material";
+import dayjs from "dayjs";
+import { DatabaseBackup } from "lucide-react";
+import React, { useEffect } from "react";
 import * as XLSX from "xlsx";
-import ProductPerformance from "../AdminHome/components/feature/ProductPerformance";
-import ProductTable from "./ProductTable";
+import { Chart } from "./Chart";
 
 //Get doanh thu theo thang
 const chartData2025: RevenueType[] = [

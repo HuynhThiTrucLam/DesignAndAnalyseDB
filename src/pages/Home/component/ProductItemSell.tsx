@@ -1,7 +1,6 @@
 import { Product } from "@/types/Product";
-import React from "react";
-import "./ProductItemSell.scss";
 import { useNavigate } from "react-router-dom";
+import "./ProductItemSell.scss";
 
 interface productProps {
   product: Product;

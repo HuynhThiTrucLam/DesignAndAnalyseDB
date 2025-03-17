@@ -10,11 +10,7 @@ interface ColorPickerProps {
   className?: string;
 }
 
-export function ColorPicker({
-  color = "#000000",
-  onChange,
-  className,
-}: ColorPickerProps) {
+export function ColorPicker({ color = "#000000", onChange }: ColorPickerProps) {
   const [selectedColor, setSelectedColor] = React.useState(color);
 
   useEffect(() => {

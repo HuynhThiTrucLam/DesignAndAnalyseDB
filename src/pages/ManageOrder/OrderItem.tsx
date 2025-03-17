@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import "./OrderItem.scss";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -7,6 +5,8 @@ import {
   AlertDialogFooter,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { useEffect, useState } from "react";
+import "./OrderItem.scss";
 
 export type OrderDetail = {
   createdAt: string;

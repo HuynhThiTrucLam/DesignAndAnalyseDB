@@ -1,45 +1,42 @@
-import { lazy, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useState } from "react";
 import {
   Outlet,
   Route,
   BrowserRouter as Router,
   Routes,
-  useRoutes,
 } from "react-router-dom";
+import { TopbarHeight } from "../src/assets/global/Theme-variable";
 import "./App.css";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Home from "./pages/Home";
-import "./Reponsive.css";
 import Policy from "./pages/Policy";
 import Size from "./pages/Size";
 import Store from "./pages/Store";
-import { TopbarHeight } from "../src/assets/global/Theme-variable";
+import "./Reponsive.css";
 
 // import { Box, Container, ThemeProvider, useMediaQuery } from "@mui/material";
 
 import {
+  Box,
+  Container,
   experimentalStyled,
   useMediaQuery,
-  Container,
-  Box,
 } from "@mui/material";
-import HeaderAdmin from "./components/HeaderAdmin/HeaderAdmin";
 import FooterAdmin from "./components/FooterAdmin.tsx/FooterAdmin";
+import HeaderAdmin from "./components/HeaderAdmin/HeaderAdmin";
 import Sidebar from "./components/Sidebar/Sidebar";
+import { Toaster } from "./components/ui/toaster";
 import AdminHome from "./pages/AdminHome/AdminHome";
+import Analyze from "./pages/Analyze/Analyze";
+import Checkout from "./pages/Checkout/Checkout";
+import ManageAccount from "./pages/ManageAccount/ManageAccount";
 import ManageOrder from "./pages/ManageOrder/ManageOrder";
 import ManageVoucher from "./pages/ManageVoucher/ManageVoucher";
-import Analyze from "./pages/Analyze/Analyze";
-import ManageAccount from "./pages/ManageAccount/ManageAccount";
-import { Toaster } from "./components/ui/toaster";
-import SignInAdmin from "./pages/SignInAdmin/SignInAdmin";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import ProductListByType from "./pages/ProductListByType/ProductListByType";
-import Checkout from "./pages/Checkout/Checkout";
+import SignInAdmin from "./pages/SignInAdmin/SignInAdmin";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -47,7 +44,7 @@ function App() {
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const lgUp = useMediaQuery("(min-width: 1200px)");
 
-  const MainWrapper = experimentalStyled("div")(({ theme }) => ({
+  const MainWrapper = experimentalStyled("div")(({}) => ({
     display: "flex",
     minHeight: "100vh",
     overflow: "hidden",

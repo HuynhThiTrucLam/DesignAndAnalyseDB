@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import renderStars from "@/components/Star/star";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./ProductDetail.css";
-import { set } from "date-fns";
-import renderStars from "@/components/Star/star";
-import { unix } from "dayjs";
 
 const ProductDetail = () => {
   const [selectedColor, setSelectedColor] = useState("1");

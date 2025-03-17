@@ -1,7 +1,12 @@
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
-import AddToPhotosOutlinedIcon from "@mui/icons-material/AddToPhotosOutlined";
-import React, { useEffect } from "react";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
@@ -10,27 +15,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogTrigger,
-  AlertDialogCancel,
-} from "@/components/ui/alert-dialog";
+import { Textarea } from "@/components/ui/textarea";
+import AddToPhotosOutlinedIcon from "@mui/icons-material/AddToPhotosOutlined";
+import React from "react";
 
 import {
-  TooltipProvider,
   Tooltip,
-  TooltipTrigger,
   TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { IconButton } from "@mui/material";
-import { Voucher } from "@/types/Voucher";
-import { set } from "react-hook-form";
 
 const VoucherAdd = () => {
-  const [voucher, setVoucher] = React.useState<Voucher | null>(null);
   const [code, setCode] = React.useState<string>("");
   const [startDate, setStartDate] = React.useState<string>("");
   const [duaration, setDuaration] = React.useState<number>(0);

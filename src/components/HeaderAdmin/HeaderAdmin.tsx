@@ -1,27 +1,23 @@
 import React from "react";
 //import { Link } from 'react-router-dom';
 
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import AddToPhotosOutlinedIcon from "@mui/icons-material/AddToPhotosOutlined";
-import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 
 import { SxProps, Theme } from "@mui/system";
 
 import {
   AppBar,
+  Avatar,
   Box,
+  Button,
+  Divider,
   IconButton,
-  Toolbar,
+  ListItemIcon,
   Menu,
   MenuItem,
-  Button,
-  Avatar,
-  Divider,
-  ListItemIcon,
-  TextField,
+  Toolbar,
 } from "@mui/material";
 interface props {
   sx: SxProps<Theme>;
@@ -29,13 +25,11 @@ interface props {
   toggleMobileSidebar: () => void;
 }
 
-import userimg from "../../assets/images/users/user.jpg";
-import Search from "../Search/Search";
-import { Settings } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import userimg from "../../assets/images/users/user.jpg";
 import Signout from "./Signout";
 
-const HeaderAdmin = ({ sx, toggleMobileSidebar, toggleSidebar }: props) => {
+const HeaderAdmin = ({ sx, toggleMobileSidebar }: props) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const navigate = useNavigate();
 
@@ -56,17 +50,6 @@ const HeaderAdmin = ({ sx, toggleMobileSidebar, toggleSidebar }: props) => {
 
   const handleClose4 = () => {
     setAnchorEl4(null);
-  };
-
-  // 5
-  const [anchorEl5, setAnchorEl5] = React.useState(null);
-
-  const handleClick5 = (event: any) => {
-    setAnchorEl5(event.currentTarget);
-  };
-
-  const handleClose5 = () => {
-    setAnchorEl5(null);
   };
 
   const handleNavToAccount = () => {

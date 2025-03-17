@@ -1,13 +1,12 @@
-import React from "react";
 import {
-  Typography,
   Box,
+  Chip,
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableRow,
-  Chip,
+  Typography,
 } from "@mui/material";
 
 const topSellingProducts = [

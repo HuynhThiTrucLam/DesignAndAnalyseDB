@@ -1,13 +1,13 @@
-import React, { useCallback } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
-import "./styles.css";
+import { useCallback } from "react";
+import NextIcon from "../../assets/images/icon/NextIcon";
+import PrevIcon from "../../assets/images/icon/PrevIcon";
 import slider1 from "../../assets/images/slider_1.webp";
 import slider2 from "../../assets/images/slider_2.webp";
 import slider3 from "../../assets/images/slider_3.webp";
 import slider4 from "../../assets/images/slider_4.webp";
-import NextIcon from "../../assets/images/icon/NextIcon";
-import PrevIcon from "../../assets/images/icon/PrevIcon";
-import Autoplay from "embla-carousel-autoplay";
+import "./styles.css";
 
 export const Slider = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);

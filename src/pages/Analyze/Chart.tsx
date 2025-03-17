@@ -1,17 +1,5 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useEffect, useState } from "react";
-import { set } from "date-fns";
 import {
   Card,
   CardContent,
@@ -27,6 +15,8 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { RevenueType } from "@/types/Chart";
+import { TrendingUp } from "lucide-react";
+import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 
 // const chartData: RevenueType[] = [
 //   { unit: "01", value: 186 },

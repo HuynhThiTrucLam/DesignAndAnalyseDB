@@ -1,19 +1,6 @@
-import { FeedBack } from "@/types/Product";
-import React, { useEffect, useState } from "react";
-import {
-  Typography,
-  Box,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Chip,
-  FormControl,
-  Select,
-  MenuItem,
-} from "@mui/material";
 import FeedbackItem from "@/components/Feedback/FeedbackItem";
+import { FeedBack } from "@/types/Product";
+import { useEffect, useState } from "react";
 
 interface ProductIdProps {
   prodID?: string;

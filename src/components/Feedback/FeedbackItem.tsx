@@ -1,7 +1,6 @@
 import { FeedBack } from "@/types/Product";
-import renderStars from "../Star/star";
-import { useState } from "react";
 import { Input } from "@mui/material";
+import renderStars from "../Star/star";
 
 interface FeedbacksProps {
   feedback: FeedBack;

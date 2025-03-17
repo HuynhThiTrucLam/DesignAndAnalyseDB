@@ -1,103 +1,11 @@
-import React, { useState } from "react";
-import "./Checkout.scss";
 import { Input } from "@/components/ui/input";
-import { Button } from "react-day-picker";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Textarea } from "@/components/ui/textarea";
+import "./Checkout.scss";
 export const mockOrderData = {};
 
-const mockProvince = [
-  { name: "Hà Nội", code: "HN" },
-  { name: "Hồ Chí Minh", code: "HCM" },
-  { name: "Đà Nẵng", code: "DN" },
-  { name: "Hải Phòng", code: "HP" },
-  { name: "Cần Thơ", code: "CT" },
-  { name: "An Giang", code: "AG" },
-  { name: "Bà Rịa - Vũng Tàu", code: "BRVT" },
-  { name: "Bắc Giang", code: "BG" },
-  { name: "Bắc Kạn", code: "BKN" },
-  { name: "Bạc Liêu", code: "BL" },
-  { name: "Bắc Ninh", code: "BN" },
-  { name: "Bến Tre", code: "BTR" },
-  { name: "Bình Định", code: "BD" },
-  { name: "Bình Dương", code: "BDG" },
-  { name: "Bình Phước", code: "BPC" },
-  { name: "Bình Thuận", code: "BTH" },
-  { name: "Cà Mau", code: "CM" },
-  { name: "Cao Bằng", code: "CB" },
-  { name: "Đắk Lắk", code: "DL" },
-  { name: "Đắk Nông", code: "DN" },
-  { name: "Điện Biên", code: "DB" },
-  { name: "Đồng Nai", code: "DNI" },
-  { name: "Đồng Tháp", code: "DTP" },
-  { name: "Gia Lai", code: "GL" },
-  { name: "Hà Giang", code: "HG" },
-  { name: "Hà Nam", code: "HNM" },
-  { name: "Hà Tĩnh", code: "HT" },
-  { name: "Hải Dương", code: "HD" },
-  { name: "Hậu Giang", code: "HGI" },
-  { name: "Hòa Bình", code: "HB" },
-  { name: "Hưng Yên", code: "HY" },
-  { name: "Khánh Hòa", code: "KH" },
-  { name: "Kiên Giang", code: "KG" },
-  { name: "Kon Tum", code: "KT" },
-  { name: "Lai Châu", code: "LC" },
-  { name: "Lâm Đồng", code: "LD" },
-  { name: "Lạng Sơn", code: "LS" },
-  { name: "Lào Cai", code: "LC" },
-  { name: "Long An", code: "LA" },
-  { name: "Nam Định", code: "ND" },
-  { name: "Nghệ An", code: "NA" },
-  { name: "Ninh Bình", code: "NB" },
-  { name: "Ninh Thuận", code: "NT" },
-  { name: "Phú Thọ", code: "PT" },
-  { name: "Quảng Bình", code: "QB" },
-  { name: "Quảng Nam", code: "QN" },
-  { name: "Quảng Ngãi", code: "QNG" },
-  { name: "Quảng Ninh", code: "QNI" },
-  { name: "Quảng Trị", code: "QTR" },
-  { name: "Sóc Trăng", code: "ST" },
-  { name: "Sơn La", code: "SL" },
-  { name: "Tây Ninh", code: "TNI" },
-  { name: "Thái Bình", code: "TB" },
-  { name: "Thái Nguyên", code: "TN" },
-  { name: "Thanh Hóa", code: "TH" },
-  { name: "Thừa Thiên Huế", code: "TTH" },
-  { name: "Tiền Giang", code: "TG" },
-  { name: "Trà Vinh", code: "TV" },
-  { name: "Tuyên Quang", code: "TQ" },
-  { name: "Vĩnh Long", code: "VL" },
-  { name: "Vĩnh Phúc", code: "VP" },
-  { name: "Yên Bái", code: "YB" },
-  { name: "Phú Yên", code: "PY" },
-  { name: "Cần Thơ", code: "CT" },
-  { name: "Đà Nẵng", code: "DN" },
-  { name: "Hải Phòng", code: "HP" },
-  { name: "Hà Nội", code: "HN" },
-  { name: "TP HCM", code: "HCM" },
-];
-
 const Checkout = () => {
-  const [checked, setChecked] = useState(false);
-  const [discountCode, setDiscountCode] = useState("");
-
-  const handleCheckboxChange = () => {
-    setChecked(!checked);
-  };
-
-  const handleDiscountCodeChange = (e: any) => {
-    setDiscountCode(e.target.value);
-  };
-
   const handleSubmit = () => {
     // Handle form submission (e.g., send data to backend)
     alert("Đặt hàng thành công!");

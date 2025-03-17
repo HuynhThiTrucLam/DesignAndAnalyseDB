@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import shoppingCart from "../../assets/images/shopping-cart.png";
 import "./CartTab.scss";
 
@@ -14,9 +12,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useEffect, useState } from "react";
-import { Product } from "@/types/Product";
-import { Link } from "react-router-dom";
 
 const mockData = [
   {
@@ -77,7 +72,7 @@ const mockData = [
 
 export function CartTab() {
   //   const [cartItemList, setCartItemList] = useState<[]>([]);
-  const [isSignedIn, setIsSignedIn] = useState(true);
+  // const [isSignedIn, setIsSignedIn] = useState(true);
 
   //   useEffect(() => {
   //     setCartItemList(mockData);

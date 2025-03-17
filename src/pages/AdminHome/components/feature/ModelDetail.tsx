@@ -1,6 +1,3 @@
-import { Product } from "@/types/Product";
-import React, { useState } from "react";
-import "./ModelDetail.scss";
 import renderStars from "@/components/Star/star";
 import {
   AlertDialog,
@@ -9,6 +6,9 @@ import {
   AlertDialogFooter,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { Product } from "@/types/Product";
+import { useState } from "react";
+import "./ModelDetail.scss";
 import ModelFeedback from "./ModelFeedback";
 
 interface ProductItemProps {
@@ -29,9 +29,7 @@ const ModelDetail = ({ product }: ProductItemProps) => {
       product?.colorList.find((item) => item.id === colorId)?.sizeList[0].id
     );
   };
-  const handleSelectSize = (sizeId: string) => {
-    setSelectedSize(sizeId);
-  };
+
   const handleOpenFeedBack = () => {
     setOpenFeedback(!openFeedback);
     setOpenSizeTab(false);

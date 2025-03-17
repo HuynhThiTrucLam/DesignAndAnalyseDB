@@ -1,11 +1,6 @@
 import AssignmentTurnedInOutlinedIcon from "@mui/icons-material/AssignmentTurnedInOutlined";
 
-import {
-  ChartNoAxesCombined,
-  List,
-  TicketPercent,
-  UserCog,
-} from "lucide-react";
+import { ChartNoAxesCombined, List, TicketPercent } from "lucide-react";
 
 const Menuitems = [
   {

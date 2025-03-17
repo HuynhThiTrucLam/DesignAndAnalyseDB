@@ -1,27 +1,14 @@
-import React, { useState } from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Card,
-  CardContent,
-  Typography,
-  Box,
-  Chip,
-  Button,
-  IconButton,
-} from "@mui/material";
-import {
-  TooltipProvider,
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-} from "@/components/ui/tooltip";
 import { Input } from "@/components/ui/input";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { Account } from "@/types/Account";
-import { EllipsisVerticalIcon, SquarePen } from "lucide-react";
+import { Box, Card, CardContent, IconButton, Typography } from "@mui/material";
+import { SquarePen } from "lucide-react";
+import { useState } from "react";
 
 const mockAccountData: Account = {
   img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_hAt5yLa0ySiNfk7UKtkNKKxj_0JNk3UIdA&s",
@@ -33,7 +20,7 @@ const mockAccountData: Account = {
 };
 
 const ManageAccount = () => {
-  const [account, setAccount] = useState<Account>(mockAccountData);
+  const [account] = useState<Account>(mockAccountData);
   const [isDisabled, setIsDisabled] = useState(true);
 
   const handleUpdateAccount = () => {

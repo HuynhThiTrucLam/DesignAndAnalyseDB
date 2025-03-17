@@ -1,5 +1,3 @@
-import { Customer } from "./Customer";
-
 export type Order = {
   id: string;
   createdAt: string;

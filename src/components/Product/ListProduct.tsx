@@ -1,5 +1,4 @@
-import React from "react";
-import { Product } from "../../pages/Home";
+import { Product } from "@/types/Product";
 import ProductItem from "./ProductItem";
 
 interface ProductListProps {
